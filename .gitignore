@@ -1,0 +1,12 @@
+# Python / Streamlit Project
+*.pyc
+__pycache__/
+.env
+.DS_Store
+*.log
+zephyr_env/
+venv/
+*.dylib
+*.so
+*.pkl
+*.db

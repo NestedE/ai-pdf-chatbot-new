@@ -1,0 +1,67 @@
+## ✅ requirements.txt
+streamlit
+python-dotenv
+PyMuPDF
+tiktoken
+langchain>=0.1.13
+langchain-community>=0.0.29
+langchain-openai
+openai>=1.0.0
+langchain-huggingface
+huggingface-hub
+faiss-cpu
+
+## 🛠 Project Banner (for GitHub README top)
+
+```
+📚 AI PDF Chatbot
+Effortlessly chat with any PDF document using HuggingFace models and local embeddings.
+Built with ❤️ by Ifiok & Zephyr
+```
+
+---
+
+## 📦 How to Package into a `.exe` (Windows)
+
+1. **Install pyinstaller**:
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. **Generate executable**:
+   ```bash
+   pyinstaller --onefile --add-data "uploaded_doc.pdf;." app.py
+   ```
+
+   If using Streamlit, it’s not natively suited for `.exe`. Consider packaging with [Streamlit Cloud](https://streamlit.io/cloud) or use Docker (below).
+
+
+## 🐳 How to Containerize with Docker
+
+1. **Create `Dockerfile`**:
+   ```Dockerfile
+   FROM python:3.11-slim
+
+   WORKDIR /app
+
+   COPY . /app
+
+   RUN pip install --upgrade pip && \
+       pip install -r requirements.txt
+
+   EXPOSE 8501
+
+   CMD ["streamlit", "run", "app.py"]
+   ```
+
+2. **Build and run container**:
+   ```bash
+   docker build -t pdf-chatbot .
+   docker run -p 8501:8501 pdf-chatbot
+   ```
+
+Access your app at `http://localhost:8501`
+
+---
+
+Let me know if you want a `.zip` or GitHub-ready bundle next! 🚀
