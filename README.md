@@ -1,101 +1,111 @@
-# 📚 AI PDF Chatbot
+# 🤖 AI PDF Chatbot
 
-Your personal assistant to chat with your PDFs using powerful open-source models and local embeddings.
-
----
-
-![Banner](https://img.shields.io/badge/PDF%20Chatbot-Streamlit%20App-green?style=flat-square&logo=streamlit)
-![HuggingFace](https://img.shields.io/badge/HuggingFace-Zephyr--7B--Beta-yellow?style=flat-square&logo=huggingface)
-![License](https://img.shields.io/github/license/yourusername/ai-pdf-chatbot?style=flat-square)
+An intelligent chatbot that reads and understands your PDF files — built with LangChain, HuggingFace Embeddings, and Streamlit.
 
 ---
 
-## ✨ Features
+## 🚀 Overview
 
-- Upload any PDF and ask questions about it
-- Uses [HuggingFace Zephyr-7B Beta](https://huggingface.co/HuggingFaceH4/zephyr-7b-beta) LLM
-- Local vector search using FAISS
-- Embeddings via Sentence Transformers
-- Streamlit web interface with clean UI
-- HuggingFace Inference API support
+The **AI PDF Chatbot** allows users to upload any PDF document and ask questions about its content. Whether it's a business report, research paper, contract, or user manual — this app gives you instant, context-aware answers.
 
 ---
 
-## 🚀 Getting Started
+## 🔧 Features
 
-### 1. Clone the Repo
+- 📄 Upload and parse PDF documents
+- 🧠 Smart question-answering using LangChain
+- 💬 Chat interface built with Streamlit
+- 🔍 Semantic search using HuggingFace Embeddings
+- ⚡ Fast and local (no OpenAI API required)
+- 🛠️ Clean and lightweight interface
+
+---
+
+## 🛠️ Tech Stack
+
+- [Python 3.11+](https://www.python.org)
+- [Streamlit](https://streamlit.io/)
+- [LangChain](https://www.langchain.com/)
+- [HuggingFace Transformers & Embeddings](https://huggingface.co/)
+- [FAISS](https://github.com/facebookresearch/faiss) for vector search
+- [PyMuPDF (`fitz`)](https://pymupdf.readthedocs.io/) for PDF text extraction
+
+---
+
+## 📦 Installation
+
+### 1. Clone the repo
+
 ```bash
-git clone https://github.com/yourusername/ai-pdf-chatbot.git
-cd ai-pdf-chatbot
+git clone https://github.com/NestedE/ai-pdf-chatbot-new.git
+cd ai-pdf-chatbot-new
+
 ```
 
-### 2. Install Requirements
+### 2. (Recommended) Create a virtual environment
 ```bash
+python -m venv zephyr_env
+source zephyr_env/bin/activate  # on macOS/Linux
+# OR
+zephyr_env\Scripts\activate  # on Windows
+```
+
+### 3. Install dependencies
 pip install -r requirements.txt
-```
-
-### 3. Add Environment Variables
-Create a `.env` file in the project root:
 ```
 PDF_CHATBOX_API=your_huggingface_api_key
 ```
 
-### 4. Run the App
+### 4. Usage
 ```bash
 streamlit run app.py
 ```
+Then open http://localhost:8501 in your browser.
 
+- Upload any .pdf file
+- Ask natural-language questions like:
+- "What is the summary of this document?"
+- "Who is the main author?"
+- "List all key points mentioned."
+- Get instant, intelligent responses from the embedded AI
 ---
 
-## 🛠 Technologies Used
-- Python 3.11+
-- Streamlit
-- LangChain
-- FAISS
-- HuggingFace Inference API
-- HuggingFace Embeddings
-- PyMuPDF (PDF Loader)
-
----
-
-## 📦 Create Executable (Windows Only)
+## 🛠 🔒 Environment Variables
+- Create a .env file in the project root:
 ```bash
-pip install pyinstaller
-pyinstaller --onefile --noconsole app.py
-```
-Output will be in `dist/app.exe`
-
----
-
-## 🐳 Run with Docker
-### Dockerfile
-```dockerfile
-FROM python:3.11-slim
-WORKDIR /app
-COPY . .
-RUN pip install --upgrade pip && pip install -r requirements.txt
-EXPOSE 8501
-CMD ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+HUGGINGFACEHUB_API_TOKEN=your_huggingface_api_token
 ```
 
-### Build & Run
-```bash
-docker build -t ai-pdf-chatbot .
-docker run -p 8501:8501 ai-pdf-chatbot
-```
+## 🌐 Deployment
+You can deploy this to Streamlit Cloud by:
 
+- Uploading this repo
+- Setting your HuggingFace token as a secret
+- Defining app.py as the main entry point
 ---
 
-## 🤝 Contributing
-Pull requests are welcome. For major changes, please open an issue first.
-
+## 📸 Screenshots
+Coming soon
 ---
 
-## 📄 License
-[MIT](LICENSE)
+## 🧠 Future Improvements
 
+- Multi-PDF support
+- Chat history memory
+- Option to switch between local and cloud LLMs
+- PDF summarization on upload
+---
+
+## 📜 License
+MIT License
+---
+
+## 💬 Questions or Feedback?
+- Feel free to open an issue or message me directly.
 ---
 
 ## ❤️ Author
-Made with love by **Ifiok & Zephyr**
-# -ai-pdf-chatbot
+- Made with love by **Ifiok & Zephyr**
+---
+
+
