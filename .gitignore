@@ -1,7 +1,7 @@
 # Python / Streamlit Project
 *.pyc
 __pycache__/
-.env
+.env.example
 .DS_Store
 *.log
 zephyr_env/
@@ -10,3 +10,4 @@ venv/
 *.so
 *.pkl
 *.db
+uploaded_doc.pdf
