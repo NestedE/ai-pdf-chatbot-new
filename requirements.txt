@@ -1,5 +1,4 @@
 ## ✅ requirements.txt
-
 streamlit==1.35.0
 python-dotenv==1.0.1
 PyMuPDF==1.23.7
@@ -10,20 +9,3 @@ huggingface_hub==0.23.0
 sentence-transformers==2.6.1
 faiss-cpu==1.7.4
 typing_extensions==4.11.0
-
-
-
-## 📝 Why Each One Is Included
-| Package                 | Why it's needed                                |
-| ----------------------- | ---------------------------------------------- |
-| `streamlit`             | For the web app UI                             |
-| `python-dotenv`         | For loading `.env` variables                   |
-| `PyMuPDF`               | To extract text from PDFs                      |
-| `langchain`             | Core language model framework                  |
-| `langchain-community`   | You’re using `PyMuPDFLoader` from this module  |
-| `langchain-huggingface` | You’re using `HuggingFaceEmbeddings`           |
-| `huggingface_hub`       | For logging in and using the `InferenceClient` |
-| `sentence-transformers` | For the embedding model you specified          |
-| `faiss-cpu`             | For vector search and similarity retrieval     |
-| `typing_extensions`     | Required for compatibility with Python 3.11+   |
-
