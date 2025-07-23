@@ -1,14 +1,16 @@
 ## ✅ requirements.txt
-streamlit
-python-dotenv
-PyMuPDF
-langchain
-langchain-community
-langchain-huggingface
-huggingface_hub
-sentence-transformers
-faiss-cpu
-typing_extensions  # for Python 3.11+
+
+streamlit==1.35.0
+python-dotenv==1.0.1
+PyMuPDF==1.23.7
+langchain==0.1.16
+langchain-community==0.0.30
+langchain-huggingface==0.0.6
+huggingface_hub==0.23.0
+sentence-transformers==2.6.1
+faiss-cpu==1.7.4
+typing_extensions==4.11.0
+
 
 
 ## 📝 Why Each One Is Included
