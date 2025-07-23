@@ -23,7 +23,7 @@ hf_token = os.getenv("PDF_CHATBOX_API")
 if not hf_token:
     raise EnvironmentError("Missing HuggingFace API token in environment variable 'PDF_CHATBOX_API'")
 
-# Login using the token from your .env file
+# Login using the token from your .env.example file
 login(token=hf_token)
 
 # ------------------------- #
@@ -117,6 +117,14 @@ if uploaded_file:
 
     with open("uploaded_doc.pdf", "wb") as f:
         f.write(uploaded_file.read())
+
+        try:
+            import fitz
+
+            st.write("PyMuPDF (fitz) imported successfully.")
+        except ImportError as e:
+            st.error(f"PyMuPDF import failed: {e}")
+            raise e
 
     loader = PyMuPDFLoader("uploaded_doc.pdf")
     documents = loader.load()
